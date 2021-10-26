@@ -1,0 +1,47 @@
+
+<div #myIdentifier class="row " style="margin: auto;">
+    <div class="row" style="--bs-gutter-x: 0.8rem !important;">
+        <h1>Opportunities</h1>
+        <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+            Destination for Artist Opportunities to promote and monetise their music. New opportunities publishes every Wednesfay.
+            <div class="margin-top-5" style="display:flex;">
+                
+                    <button [ngClass]="activetab ? 'button button_active':'button button_inactive'" (click)="activetab = !activetab">Open Opportunity</button>
+                    <button [ngClass]="!activetab ? 'button button_active':'button button_inactive'" (click)="activetab = !activetab">Upcoming Opportunity</button> 
+            </div>
+        </div>
+        <hr class="margin-top-3">
+    </div>
+    <div class="row margin-top-2 opprotunity-div" [ngStyle] = "{'max-height.px': innerHeight}" style="padding: 0;margin: 0;">
+            <button *ngFor="let filter of filterscategory" class="filter-btn">{{filter.name}}</button>
+            <div class="row" >
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" *ngFor="let card of opportunityList" style="min-width:356px;">
+                    <mat-card class="row margin-top-3" style="display:flex;border: 1px solid #E0E3EB;margin-right: 1%;">
+                        <!-- <mat-card-title-group> -->
+                        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-4" style=" padding-left: 0;text-align: center;">
+                            <img mat-card-sm-image src="../assets/img/{{card.img}}" class="opportuniy-image"> 
+                        </div>
+                        <div class="col-lg-8 col-md-9 col-sm-8 col-xs-8" >
+                            <label class="category-heading">{{card.heading | uppercase}}</label>
+                            <div class="category-details">{{card.text}}</div>
+                        </div>
+                        <hr class="margin-top-5" style="margin-bottom: 2%;"/>
+                        <div class="row" style="padding:0;margin:0;height: 40px;">
+                            <div class="col-3">
+                                <button class="btn-card" mat-button disabled style="font-size: 0.7rem;padding: inherit;">{{card.btn}}</button>
+                            </div>
+                            <div class="col-7" style="text-align: center;">
+                                <label class="card-info" style="font-size: 0.65rem;padding: inherit;margin-top: .25rem;">{{card.info}}</label>
+                            </div>
+                            <div class="col" >
+                                <img  style="margin-top: .63rem;float:right;" src="../assets/img/bookmark.png" />
+                            </div>
+                        </div>
+                        
+                    </mat-card>
+                </div>
+            </div>
+            
+    </div>
+    
+</div>
