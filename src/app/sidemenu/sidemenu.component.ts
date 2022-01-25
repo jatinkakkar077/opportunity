@@ -24,7 +24,7 @@ export class SidemenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.isMobileView = window.innerWidth < 450;
+    this.isMobileView = window.outerWidth < 650;
   }
 
 }

@@ -1,21 +1,23 @@
 <div class="row" *ngIf="!isMobileView">
-    <span class="col-lg-2 col-md-2 col-sm-2 col-xs-2" ></span>
-    <span class="col-lg-10 col-md-10 col-sm-10 col-xs-10 side_menu_div" >
-        <img src="../assets/img/logo.png" alt="logo" width="150" class="logo side_menu_icon"/>
+    <span class="col-lg-0 col-md-0 col-sm-2 col-2" ></span>
+    <span class="col-lg-10 col-md-12 col-sm-10 col-10 side_menu_div" >
+        <img src="../assets/img/logo.png" alt="logo" width="150" class="logo side_menu_icon" style="margin-left: 15%;">
         <div *ngFor="let item of menu"  [ngClass]="item.active ? 'menu-div row menu-active':'menu-div row'">
-            <span class="col-lg-2 col-md-2 col-sm-2 col-xs-2 .side_menu_logo" >
+            <span class="col-lg-2 col-md-3 col-sm-2 col-xs-2 .side_menu_logo" >
                 <img src="../assets/img/{{item.icon}}" class="menu-logo logo-padding" alt="logo" style="align-items: center;"/>
             </span>
-            <span class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pad_left_0" >
-                <span [ngClass]="item.active ? 'menu-labels highlight' : 'menu-labels'">{{item.name}}</span>
+            <span class="col-lg-6 col-md-7 col-sm-6 col-xs-6 pad_left_0">
+                <span [ngClass]="item.active ? 'menu-labels highlight' : 'menu-labels'"  style="font-size:12px;">{{item.name}}</span>
             </span>
-        <span *ngIf="item.subMenu" class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >
+        <span *ngIf="item.subMenu" class="col-lg-2 col-md-1 col-sm-2 col-xs-2" >
             <img src="../assets/img/arrow.png" alt="arrow"/>
         </span>
         </div>
     </span>
 </div>
+
 <div class="" *ngIf="isMobileView" style="display: flex;margin-bottom: 2%;">
+
     <!-- <img src="../assets/img/logo.png" alt="logo" width="150" style="align-items: center;margin-bottom: 10%;" class="logo"/> -->
     <div class="" (click)="menuShow = !menuShow">
        <img *ngIf="!menuShow" src="../assets/img/menu.png" alt="menu" height="20" style="margin-top:.7rem;cursor:pointer" />

@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-lg-2 col-md-4 col-sm-2 col-xs-2">
+        
+        <div class="" style="margin-top: 1rem;">
+            <img   class=""   src="../assets/img/u-arrow-right-1.png"   />
+            <span [hidden]="isTabletMode || isMobileView" class="" routerLink="/opportunitylist">Back to Home Page</span>
+            <span [hidden]="isDesktopMode " class="" routerLink="/opportunitylist">Go Back</span>
+        </div>
+    </div>
+    <div [hidden]="isMobileView" class="col-lg-3 col-md-3 col-sm-8 col-xs-8"></div>
+    <div [hidden]="isMobileView" class="col-lg-7 col-md-5 col-sm-7 col-xs-2" style="text-align: right;">
+      <div class="" style="right: 3%; ">      
+        <img
+          class="search-comment-notification"
+          src="../assets/img/search-comment-notification-1.png"
+        />
+        <img
+          class=""
+          src="../assets/img/fi-chevron-down-1.png"
+        />
+        <img style="margin-left: 1rem;"
+          class="divider"
+          src="../assets/img/divider-2.png"
+        />
+        <img style="margin-left: 1rem;"
+        class=""
+        src="../assets/img/photo-1.png"
+        />
+      </div>
+    </div>
+</div>

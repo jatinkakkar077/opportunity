@@ -1,0 +1,145 @@
+<div class="row">
+    <div class="col-lg-2 col-md-3 col-sm-5 col-12 border-right" >
+        <app-sidemenu></app-sidemenu>
+    </div>
+    <div class="col-lg-10 col-md-9 col-sm-10 col-12">
+        
+        <div class="row" style="margin-left: 2.5%;" >
+            <app-app-header></app-app-header>
+        </div>
+        <div class="row" style="margin-top:1%;">
+
+            <div class="col-lg-10 col-md-12 col-sm-12 col-12" style="display: inline-flex;">
+                <div class="col-lg-1 col-md-3 col-sm-3 col-2" style="max-width: 110px;">
+                    <img class=""  [ngClass]="{'mar-right-5': isMobileView == true}" src="../assets/img/image-5.png" />
+                    
+                </div>
+                <div class="col-lg-11 col-md-9 col-sm-9 col-10 ">
+                    <div class="header-text" style="margin-left:0rem;font-size:16px;    padding-left: 2%;">
+                        Get your songs heard across MG Motors Outlets
+                    </div>
+                    <div style="margin-left:0rem;padding-left: 2%;color: #989AA3;font-size:12px;padding-top: 5px;;">
+                        Submission closed on 15 Feb 2021, Type - Partner Managed
+                    </div>
+                    <div  style="padding-top: 0%;;padding-left: 2%;">
+                        <span class="status-btn" >Open</span>
+                        <span class="group-2156" style="margin-left:1%;padding:10px 10px 10px 10px">
+                            <span class="">
+                              <img
+                              class="utrophy" style="padding-left: 2px;height: 18px; margin-top: -3px;"
+                              src="../assets/img/u-trophy-1.png"
+                            />
+                              <span class="total-opportunities-created-4" style="padding-left:1%">No of Awards 2</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div style="padding-top: 0%;;padding-left: 2%;color: #989AA3;font-size: 12px;">
+                        Awards will be declared by 20, Feb  2021
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row margin-top">
+            <div class="group-2081">
+                <div class="overlap-group border-1px-mystic">
+                  <div class="all26 valign-text-middle poppins-semi-bold-log-cabin-12px btn-text" style="font-size:12px;">
+                    <span><span class="btn-text poppins-semi-bold-log-cabin-12px">All(26)</span> </span>
+                  </div>
+                </div>
+            </div>
+
+            <div class="radio border-1px-mystic" style="margin-left: 5%;">
+                <div class="undecided-12 valign-text-middle poppins-normal-log-cabin-12px" >
+                  <span><span class="poppins-normal-log-cabin-12px">Undecided (12)</span> </span>
+                </div>
+            </div>
+
+            <div class="radio border-1px-mystic">
+                <img style="margin-top: 1%;"
+                class="thumbs-up"
+                src="../assets/img/thumbs-up-1.png"
+                />
+                <div class="undecided-12 valign-text-middle poppins-normal-log-cabin-12px" style="margin-left: 25%;">
+                  <span><span class="poppins-normal-log-cabin-12px">Like (2)</span> </span>
+                </div>
+            </div>
+
+            <div class="radio border-1px-mystic">
+                <img
+                class="thumbs-up" style="margin-top: 5%;"
+                src="../assets/img/thumbs-down-1.png"
+                />
+                <div class="undecided-12 valign-text-middle poppins-normal-log-cabin-12px" style="margin-left: 25%;">
+                  <span><span class="poppins-normal-log-cabin-12px">Dislike (2)</span> </span>
+                </div>
+            </div>
+
+            <div class="radio border-1px-mystic">
+                <img
+                  class="utrophy" style="color:black;"
+                  src="../assets/img/utrophy-1.png"
+                />
+                <div class="undecided-12 valign-text-middle poppins-normal-log-cabin-12px" style="margin-left: 25%;">
+                  <span><span class="poppins-normal-log-cabin-12px">Awards (0)</span> </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" [ngClass]="{'mobile-margin-top-table mobile-table-height':isMobileView, 'margin-top table-height':!isMobileView}" >
+          <div class="col-lg-1 col-md-2 col-sm-4 col-3 " [ngClass]="{'max-width-6':isDesktopMode,'max-width-12':isTabletMode}" style=" font-size:12px;">Sr No.</div>
+          <div class="col-lg-1 col-md-2 col-sm-4 col-4 " style="padding: 0;font-size:12px;">Submission</div>
+        </div>
+
+        <div class="row" *ngFor="let row of opportunitydetaillist ;let rowindex = index" [ngClass]="{'desktop-height':isDesktopMode, 'tablet-height':isTabletMode, 'table-row-mobile-height':isMobileView}">
+           <div class="col-lg-1 col-md-2 col-sm-2 col-2 " [ngClass]="{'max-width-6':isDesktopMode,'max-width-12':isTabletMode}" style="top:0;bottom: 0;">
+            <p style="    padding: 10px;">{{rowindex+1}}
+            </p>
+          </div>  
+           <div class="col-lg-3 col-md-4 col-sm-2 col-6 " style="display: contents;max-width: 10%;;">
+              <div class="col-lg-1 col-md-2 col-sm-2 col-3 " [ngClass]="{'max-width-8':isDesktopMode}" style="">
+                <img class="image" style="border-radius: 8px;height: 65px;"  [ngClass]="{'mar-right-5': isMobileView == true}" src="../assets/img/{{row.submissionImage}}" />
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-2 col-3 " [ngClass]="{'max-width-8':isDesktopMode}" style="">
+                <div style="padding: 0px 0px 3px 0px;"> {{row.submissionName}}</div>
+                <div style="padding: 0px 0px 3px 0px;color: #787878;">{{row.submissiondesc}}</div>
+                <div [hidden]="!isTabletMode || !isMobileView" style="color: #989AA3;    font-size: 12px;">{{row.date}}</div>
+                <div [hidden]="!isTabletMode || !isMobileView" style="color: #989AA3;    font-size: 12px;">{{row.time}}</div>
+                <div [hidden]="row.submissioncontact == 'NA'" class="radio border-1px-mystic" style="font-size: 12px;margin-left:-2%;width:82px;height: 25px;">
+                  <div class="undecided-12 valign-text-middle poppins-normal-log-cabin-12px" style="    height: 14px;">
+                    <span><span class="poppins-normal-log-cabin-12px">{{row.submissioncontact}}</span> </span>
+                  </div>
+                  <img 
+                  class="utrophy" style="color:black;float:right;padding-right: 8%;height:5px;margin-top: 10%;"
+                  src="../assets/img/dwn_arrow.png"
+                  />
+                </div> 
+              </div> 
+           </div>
+           <div [hidden]="isTabletMode || isMobileView" class="col-lg-1 col-md-2 col-sm-2 col-xs-2 " style="color: #989AA3;    font-size: 12px;">
+              <div>{{row.date}}</div>
+              <div>{{row.time}}</div>
+           </div>
+           <div class="col-lg-2 col-md-2 col-sm-2 col-4 ">
+             <span style="padding-right: 5%;padding:5%;" [hidden]="row.thumb1 == '0'"><img  src="../assets/img/thumb{{row.thumb1}}.png"/></span>
+             <span style="padding-right: 5%;padding:15%;" [hidden]="row.thumb2 == '0'"><img  src="../assets/img/thumb{{row.thumb2}}.png"/></span>
+             <!-- <span style="padding-right: 5%;"><img  src="../assets/img/{{row.thumb3}}"/></span>
+             <span style="padding-right: 5%;"><img  src="../assets/img/{{row.thumb4}}"/></span> -->
+             <!-- <span><img  src="../assets/img/thumb3.png"/></span>
+             <span><img  src="../assets/img/thumb4.png"/></span> -->
+           </div>
+           <div class="col-lg-2 col-md-4 col-sm-2 col-xs-2 " style="text-align: center;">
+              <span [hidden]="row.status != 'Award Offered'" style="font-weight: 600;font-size: 14px;">{{row.status}}</span>
+              <div [hidden]="row.status == 'Award Offered'" class="submit-new-oppor" >
+                <!-- <span class="poppins-medium-royal-blue-12px">Submit New Opportunity</span> -->
+                <img  src="../assets/img/{{row.status}}.png"/>
+              </div>
+              <span [hidden]="row.status != 'Award Offered'" style="padding-left: 10%;"><img  src="../assets/img/msg.png"/></span>
+
+           </div>
+              
+        </div>
+
+        
+</div>

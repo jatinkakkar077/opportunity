@@ -5,8 +5,12 @@
 .margin-top-2 {
     margin-top:2%;
 }
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
 
-@media only screen and (max-width: 465px) {
+/* @media only screen and (max-width: 465px) {
 
     .border-right {
         border-right: 0px solid #E5E5E5;
@@ -15,4 +19,4 @@
     .row {
         --bs-gutter-x: 0rem !important;
     }
-}
+} */
